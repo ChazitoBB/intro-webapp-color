@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Picker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="mt-5 text-center">Color Picker</h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5 class="card-title">RGB Controls</h5>
+          <div class="form-group">
+            <label for="red">Red:</label>
+            <input type="range" class="form-range" id="red" min="0" max="255" value="0">
+            <input type="number" class="form-control mt-2" id="red-text" min="0" max="255" value="0">
+          </div>
+          <div class="form-group">
+            <label for="green">Green:</label>
+            <input type="range" class="form-range" id="green" min="0" max="255" value="0">
+            <input type="number" class="form-control mt-2" id="green-text" min="0" max="255" value="0">
+          </div>
+          <div class="form-group">
+            <label for="blue">Blue:</label>
+            <input type="range" class="form-range" id="blue" min="0" max="255" value="0">
+            <input type="number" class="form-control mt-2" id="blue-text" min="0" max="255" value="0">
+          </div>
+          <div class="form-group">
+            <label for="color-picker">Color Picker:</label>
+            <input type="color" class="form-control" id="color-picker">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5 class="card-title">Color Preview</h5>
+          <div id="color-box" class="p-3"></div>
+          <p class="mt-3">RGB: <span id="rgb">0, 0, 0</span></p>
+          <p>Hex: <span id="hex">#000000</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
